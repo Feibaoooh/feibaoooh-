@@ -1,0 +1,80 @@
+·使用对象
+·创建并操作数组
+·理解基本的JavaScript类型
+·使用基本类型和基本包装类型
+
+
+2.1 Object类型
+  常见且在ECMAScript中使用得最多。虽然Object的实例不具备多少功能，但对于应用程序中存储和传输数据而言，它们确实是非常理想的选择；
+  创建Object实例有两种方式：
+  ·使用new操作符后跟Object构造函数；
+  如var person=new Object();
+  person.name="Feibaoooh";
+  person.age=20;
+  ·使用对象字面量表示法；（对象字面量是对象定义的一种简写方式，目的在于简化创建包含大量属性的对象的过程。）
+  如var person={
+        name:"Feibaoooh",
+        age:20
+    };
+  访问对象属性有两种方法：点表示法和方括号表示法；
+  如alert(person.name);    //"Feibaoooh"
+  alert(person["name"]);   //"Feibaoooh"
+  从功能上看，这两种访问对象属性的方法没有任何区别。但方括号语法的主要优点是可以通过变量来访问属性。
+  如var propertyName="name";
+  alert(person[propertyName]);    //"Feibaoooh"
+  如果属性名中包含会导致语法错误的字符，或者属性名使用的是关键字或保留字，也可以使用方括号表示法。
+  如person["first name"]="Feibaoooh";
+  由于first name中包含一个空格，所以不能使用点表示法来访问它。然鹅，属性名是可以包含非字母非数字的，这时候就可以使用方括号表示法来访问它们、
+  通常，除非必须使用变量来访问属性，否则我们建议使用点表示法。
+2.2 Array类型
+  Array是次之object的常用类型。虽然ECMAScript与其他语言中的数组都是数据的有序列表，但与其他语言不同的是，ECMAScript数组的每一项都可以保存任何类型的
+数据。而且，ECMAScript数组的大小是可以动态调整的，即可以随着数据的添加自动增长以容纳新增数据。
+  创建数组的基本方式有两种。
+  ·第一种是使用Array构造函数。
+  如var colors=new Array();
+  `如果提前知道数组要保存的项目数量,比如20：
+  var colors=new Array(20);
+  `也可以向Array构造函数传递数组中应该包含的项：
+  var colors=new Array("red","blue","green");
+  给构造函数传递一个值也可以创建数组。如果传递的是数值，则会创建给定数值项数的数值；而如果传递的是其他类型的参数，则会创建只包含那个值的数组。
+  如 var colors=new Array(3);    创建一个包含3项的数组；
+  var names=new Array("Greg");    创建一个包含一项，即字符串“Greg”的数组；
+  `可以省略new操作符：
+  var colors=Array();
+  第二种是使用数组字面量表示法。数组字面量由一对包含数组项的方括号表示，多个数组项之间以逗号隔开。
+  如 var colors=["red","blue","green"];
+  var names=[];
+  var values=[1,2,];
+  var option=[,,,,];
+2.2.1 检测数组
+2.2.2 转换方法
+2.2.3 栈方法
+2.2.4 队列方法
+2.2.5 重排序方法
+2.2.6 操作方法
+2.2.7位置方法
+2.2.8 迭代方法
+2.2.9 归并方法
+2.3 Date类型
+2.3.1 继承的方法
+2.3.2 日期格式化方法
+2.3.3日期/时间组件方法
+2.4 RegExp类型
+2.4.1 RegExp实例属性
+2.4.2 RegExp实例方法
+2.4.3 RegExp构造函数属性
+2.4.4 模式的局限性
+2.5 Function类型
+2.5.1 没有重载（深入理解）
+2.5.2 函数声明与函数表达式
+2.5.3作为值的函数
+2.5.4函数内部属性
+2.5.5函数属性和方法
+2.6 基本包装类型
+2.6.1 Boolean类型
+2.6.2 Number类型
+2.6.3 String类型
+2.7 单体内置对象
+2.7.1 Global对象
+2.7.2 Math对象
+2.8 总结
